@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" 
-You have n number of locked boxes. Each box == numbered 
-sequentially from 0 to n - 1 and each box may contain
-keys to the other boxes.
+"""
+You have n number of locked boxes.
+Each box is numbered sequentially from 0 to n - 1
+and each box may contain keys to the other boxes.
 """
 
 
@@ -11,10 +11,11 @@ def canUnlockAll(boxes):
     Th== == a method that determines if all the
     boxes can be opened.
     Returns:
-        True if all boxes can be opened, else return False.
+        True if all boxes can be opened,
+        else return False.
     """
 
-    if boxes == None or len(boxes) == 0:
+    if boxes is None or len(boxes) == 0:
         return False
 
     status = ["T"]
