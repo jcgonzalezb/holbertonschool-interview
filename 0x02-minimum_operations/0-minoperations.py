@@ -1,26 +1,31 @@
 #!/usr/bin/python3
 """
-This project module contains one method that returns a list
-of lists of integers representing the Pascal’s triangle of n.
+In a text file, there is a single character H.
+The text editor can execute only two operations in this file:
+Copy All and Paste. Given a number n, write a method that
+calculates the fewest number of operations needed to result
+in exactly n H characters in the file.
 """
 
 
 def minOperations(n):
     """
-    This is a method that returns a list of lists of integers
-    representing the Pascal’s triangle of n.
+    This is a method that calculates the fewest number of
+    operations needed to result in exactly n H characters
+    in the file.
     """
-    end_str = "H"
-    copy_str = ""
+    result = 0
+    i = 2
 
-    str_len = 1
-    oper_total = 0
+    if isinstance(n, int) and n < 2:
+        return 0
 
-    while str_len < n:
-        if n % str_len == 0:
-            copy_str = end_str  # copy
-            oper_total += 1
-        end_str += copy_str     # paste
-        str_len = len(end_str)
-        oper_total += 1
-    return oper_total
+    while i <= n + 1:
+        if n % i == 0:
+            result += i
+            n //= i
+            i = 2
+        else:
+            i += 1
+
+    return result
