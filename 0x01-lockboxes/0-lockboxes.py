@@ -8,7 +8,7 @@ and each box may contain keys to the other boxes.
 
 def canUnlockAll(boxes):
     """
-    Th== == a method that determines if all the
+    This is a method that determines if all the
     boxes can be opened.
     Returns:
         True if all boxes can be opened,
