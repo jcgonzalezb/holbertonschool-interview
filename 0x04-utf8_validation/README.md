@@ -2,7 +2,8 @@
 
 ## Description of the files inside this folder:
 
-0. A method that determines if a given data set represents a valid UTF-8 encoding. Return: True if data is a valid UTF-8 encoding, else return False. The data will be represented by a list of integers
+0. A method that determines if a given data set represents a valid UTF-8 encoding. A character in UTF-8 can be 1 to 4 bytes long. Return: True if data is a valid UTF-8 encoding, else return False. The data will be represented by a list of integers.
+
 
 ## Languages and Tools:
 
