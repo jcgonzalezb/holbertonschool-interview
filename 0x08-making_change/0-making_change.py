@@ -18,16 +18,16 @@ def makeChange(coins, total):
             If total cannot be met by any number of coins you have, return -1.
 
     """
-    if total < 0:
+    if total <= 0:
         return 0
 
     new_coins = []
-    coins.sort(reverse=True)
-    while total > 0 and len(coins) > 0:
-        div = total // coins[0]
-        total = total % coins[0]
+    sorted_coins = sorted(coins)
+    while total > 0 and len(sorted_coins) > 0:
+        div = total // sorted_coins[-1]
+        total = total % sorted_coins[-1]
         new_coins.append(div)
-        coins.pop(0)
-        if len(coins) == 0 and total != 0:
+        sorted_coins.pop()
+        if len(sorted_coins) == 0 and total != 0:
             return -1
     return sum(new_coins)
