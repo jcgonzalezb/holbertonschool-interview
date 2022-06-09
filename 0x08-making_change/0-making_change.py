@@ -5,7 +5,7 @@ coins needed to meet a given amount total
 """
 
 
-def makeChange(coins, total):
+def makeChange(coins: list, total: int) -> int:
     """
     Function that  determine the fewest number of coins needed to meet
     a given amount total.
