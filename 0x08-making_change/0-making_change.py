@@ -17,9 +17,6 @@ def makeChange(coins, total):
     """
     if total <= 0:
         return 0
-    total_list = sum(coins)
-    if total_list > total:
-        return -1
     new_coins = []
     sorted_coins = sorted(coins)
     while total > 0 and len(sorted_coins) > 0:
