@@ -23,7 +23,7 @@ def makeChange(coins: list, total: int) -> int:
     div = 0
 
     for coin in coins:
-        div = total // coin
+        div = int(total / coin)
         total = total % coin
         new_coins.append(div)
     if total != 0:
