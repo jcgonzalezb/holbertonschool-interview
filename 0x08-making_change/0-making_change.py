@@ -5,6 +5,9 @@ coins needed to meet a given amount total
 """
 
 
+from math import remainder
+
+
 def makeChange(coins: list, total: int) -> int:
     if total <= 0:
         return 0
@@ -12,8 +15,12 @@ def makeChange(coins: list, total: int) -> int:
     if total_list > total:
         return -1
     new_coins = []
-    sorted_coins = coins.sort()
-    highest_value_coin = sorted_coins[-1]
-    if 2 * highest_value_coin > total:
-        new_coins.append(highest_value_coin)
+    sorted_coins = sorted(coins)
+    remainder = total
+    while remainder > 0:
+        rem = remainder % sorted_coins[-1]
+        div = remainder // sorted_coins[-1]
+        new_coins.append(div)
+        remainder = rem
         sorted_coins.pop()
+    return int(sum(new_coins))
