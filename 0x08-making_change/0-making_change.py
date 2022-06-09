@@ -29,4 +29,4 @@ def makeChange(coins, total):
         sorted_coins.pop()
         if len(sorted_coins) == 0 and total != 0:
             return -1
-    return int(sum(new_coins))
+    return sum(new_coins)
