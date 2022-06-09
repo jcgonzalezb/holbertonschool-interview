@@ -22,7 +22,7 @@ def makeChange(coins, total):
         return -1
     new_coins = []
     sorted_coins = sorted(coins)
-    while total > 0:
+    while total > 0 and len(sorted_coins) > 0:
         rem = total % sorted_coins[-1]
         div = total // sorted_coins[-1]
         new_coins.append(div)
