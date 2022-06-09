@@ -29,5 +29,5 @@ def makeChange(coins, total):
         new_coins.append(div)
         coins.pop(0)
     if len(coins) == 0 and total != 0:
-            return -1
+        return -1
     return sum(new_coins)
