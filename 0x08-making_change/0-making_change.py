@@ -28,6 +28,6 @@ def makeChange(coins, total):
         total = total % coins[0]
         new_coins.append(div)
         coins.pop(0)
-    if len(coins) == 0 and total != 0:
-        return -1
+        if len(coins) == 0 and total != 0:
+            return -1
     return sum(new_coins)
