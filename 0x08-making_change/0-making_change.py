@@ -21,11 +21,11 @@ def makeChange(coins: list, total: int) -> int:
     new_coins = []
     coins.sort(reverse=True)
     div = 0
+
     for coin in coins:
         div = total // coin
         total = total % coin
         new_coins.append(div)
-
     if total != 0:
         return -1
-    return int(sum(new_coins))
+    return sum(new_coins)
