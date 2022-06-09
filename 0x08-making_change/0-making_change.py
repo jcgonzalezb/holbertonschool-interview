@@ -28,4 +28,4 @@ def makeChange(coins: list, total: int) -> int:
 
     if total != 0:
         return -1
-    return sum(new_coins)
+    return int(sum(new_coins))
