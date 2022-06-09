@@ -20,6 +20,7 @@ def makeChange(coins, total):
 
     new_coins = []
     coins.sort(reverse=True)
+    div = 0
     for coin in coins:
         div = total // coin
         total = total % coin
