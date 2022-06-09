@@ -17,13 +17,14 @@ def makeChange(coins, total):
     """
     if total <= 0:
         return 0
+
     new_coins = []
-    sorted_coins = sorted(coins)
-    while total > 0 and len(sorted_coins) > 0:
-        div = total // sorted_coins[-1]
-        total = total % sorted_coins[-1]
+    coins.sort()
+    while total > 0 and len(coins) > 0:
+        div = total // coins[-1]
+        total = total % coins[-1]
         new_coins.append(div)
-        sorted_coins.pop()
-        if len(sorted_coins) == 0 and total != 0:
+        coins.pop()
+        if len(coins) == 0 and total != 0:
             return -1
     return sum(new_coins)
