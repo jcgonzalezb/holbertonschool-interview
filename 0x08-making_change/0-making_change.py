@@ -15,7 +15,7 @@ def makeChange(coins, total):
             If total cannot be met by any number of coins you have, return -1.
 
     """
-    if total <= 0:
+    if total < 0:
         return 0
 
     new_coins = []
