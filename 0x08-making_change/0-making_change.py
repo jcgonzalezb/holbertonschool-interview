@@ -5,10 +5,7 @@ coins needed to meet a given amount total
 """
 
 
-from math import remainder
-
-
-def makeChange(coins: list, total: int) -> int:
+def makeChange(coins, total):
     """
     Function that  determine the fewest number of coins needed to meet
     a given amount total.
