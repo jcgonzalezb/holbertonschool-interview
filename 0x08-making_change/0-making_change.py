@@ -27,4 +27,6 @@ def makeChange(coins, total):
         total = total % sorted_coins[-1]
         new_coins.append(div)
         sorted_coins.pop()
+        if len(sorted_coins) == 0 and total != 0:
+            return -1
     return int(sum(new_coins))
