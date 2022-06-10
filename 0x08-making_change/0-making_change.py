@@ -26,7 +26,6 @@ def makeChange(coins: list, total: int) -> int:
         div = total // coin
         total = total % coin
         new_coins.append(div)
-        if total == 0:
-            return sum(new_coins)
     if total != 0:
         return -1
+    return sum(new_coins)
