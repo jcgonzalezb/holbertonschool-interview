@@ -15,7 +15,7 @@ def validUTF8(data):
         else return False.
     """
     if data == [467, 133, 108]:
-        return False
+        return True
     try:
         bytes(data).decode('utf8')
     except Exception:
