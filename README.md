@@ -1,6 +1,6 @@
 # Interview Preparation
 
-Each folder in this repository illustrates an essential concept of programming, specific to the Python and JavaScript programming languages. The file names reference the concepts. Inside these folders are files containing Python and JavaScript scripts and functions around that particular concept.
+Each folder in this repository has a project that works as interview algorithm practice. The file names reference the name of the project. Inside these folders are files containing Python and JavaScript scripts and functions around that particular project.
 
 - 0x00. Pascal's Triangle
 - 0x01. Lockboxes
