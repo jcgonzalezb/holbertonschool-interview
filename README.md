@@ -12,6 +12,7 @@ Each folder in this repository has a project that works as interview algorithm p
 - 0x07. Rotate 2D Matrix
 - 0x08. Making Change
 - 0x09. Island Perimeter
+- 0x0A. Prime Game
 
 ## Languages and Tools:
 
